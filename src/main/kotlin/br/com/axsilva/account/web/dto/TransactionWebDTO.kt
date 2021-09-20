@@ -1,7 +1,7 @@
 package br.com.axsilva.account.web.dto
 
 data class TransactionWebDTO(
-    val originAccount: AccountWebDTO,
-    val destinationAccount: AccountWebDTO,
+    val origin: AccountWebDTO,
+    val destination: AccountWebDTO,
     val money : Double
 )

@@ -9,12 +9,12 @@ class TransactionInputDtoMapper {
         fun TransactionWebDTO.mapperFrom(): TransactionInputDTO {
             return TransactionInputDTO(
                 originAccount = AccountInputDTO(
-                    this.originAccount.clientCode,
-                    this.originAccount.agency
+                    this.origin.clientCode,
+                    this.origin.agency
                 ),
                 destinationAccount = AccountInputDTO(
-                    this.destinationAccount.clientCode,
-                    this.destinationAccount.agency
+                    this.destination.clientCode,
+                    this.destination.agency
                 ),
                 money = this.money
             )

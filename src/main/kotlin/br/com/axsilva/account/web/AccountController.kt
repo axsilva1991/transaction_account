@@ -19,7 +19,7 @@ class AccountController (
 
     @PostMapping("/v1/account/transaction")
     fun transaction(@RequestBody transactionWebDTO: TransactionWebDTO): ResponseEntity<HttpStatus> {
-        log.info("AccountController = TransactionWebDTO:-> {}", transactionWebDTO)
+        log.info("AccountController.transaction() = TransactionWebDTO:-> {}", transactionWebDTO)
         transaction?.transferFor(transactionWebDTO.mapperFrom())
         return ResponseEntity(HttpStatus.ACCEPTED)
     }
